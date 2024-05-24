@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  aspect-ratio: 3/1;
+  padding: 40px 0;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+table *{
+  border: black 1px solid;
+  margin: 0;
+  padding: .5rem;
+  text-align: center;
+  max-width: auto;
+}
+
+.descricao {
+    text-wrap: wrap;
+}
