@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
     <title>Safe.Finanlight</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="/index.html">
-            <h1>Safe.Finanlight</h1>
-        </a>
-        <nav>
-            <ul>
-                <a href="./paginas/registro.html">Registros</a>
-                <a href="./paginas/agenda.html">Agenda</a>
-            </ul>
-        </nav>
+      <h1>Safe.Finanlight</h1>
     </header>
 
     <main>
-        <h1>Dashboard</h1>
-        <section>
-            <div class="grafico">
-                <h2>Consumo de Energia (ilustrativo)</h2>
-                <select name="regioes" id="">
-                    <option value="zone1">Zona1</option>
-                    <option value="zone1">Zona2</option>
-                    <option value="zone1">Zona3</option>
-                    <option value="zone1">Zona4</option>
-                    <option value="zone1">Zona5</option>
-                </select>
-                <img src="/img/Grafico-de-Linha.png" alt=''></imag>
-            </div>
-            <div class="grafico">
-                <h2>Lampadas em funcionamento (ilustrativo)</h2>
-                <select name="regioes" id="">
-                    <option value="zone1">Zona1</option>
-                    <option value="zone1">Zona2</option>
-                    <option value="zone1">Zona3</option>
-                    <option value="zone1">Zona4</option>
-                    <option value="zone1">Zona5</option>
-                </select>
-                <img src="/img/Grafico-de-pizza.png" alt=""></imag>
-            </div>
-        </section>
+      <div class="page">
+        <form method="POST" class="formLogin">
+          <h1>Login</h1>
+          <p>Digite os seus dados de acesso no campo abaixo.</p>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            placeholder="Digite seu e-mail"
+            autofocus="true"
+            id="login"
+          />
+          <label for="password">Senha</label>
+          <input type="password" placeholder="Digite seu e-mail" id="senha" />
+          <input
+            type="submit"
+            value="Acessar"
+            onclick="logar(); return false"
+            class="btn"
+          />
+        </form>
+      </div>
     </main>
 
-    <footer>
-        <nav>
-            <ul>
-                <a href="./paginas/registro.html">Registro</a>
-                <a href="./paginas/agenda.html">Agenda</a>
-            </ul>
-        </nav>
-        Todos os direitos reservados
-    </footer>
-</body>
+    <script>
+      function logar() {
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("senha").value;
 
+        if (login == "admin" && senha == "123") {
+          location.href = "./paginas/home.html";
+        } else {
+          alert("Usuario ou senha incorretos");
+        }
+      }
+    </script>
+
+    <footer>Todos os direitos reservados</footer>
+  </body>
 </html>
